@@ -97,7 +97,7 @@ class Tweet:
 
 	def init_emoji_score(self):
 		emoji_score=dict()
-		data=file('emoji_senti.csv').readlines()
+		data=file('./xls/emoji_senti.csv').readlines()
 		n=len(data)
 		data=[data[i][:-1].split(',') for i in xrange(n)]
 		for i in xrange(n):
