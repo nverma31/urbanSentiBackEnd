@@ -1,6 +1,6 @@
 import dbProcess, os, copy
 import re
-import geoCluster
+# import geoCluster
 import preprocessing as pre
 import gensim
 import math
@@ -46,7 +46,7 @@ while True:
 freqFd.close()
 
 
-model = gensim.models.Word2Vec.load('modelOut.txt')
+model = gensim.models.Word2Vec.load('../keywordsSelection/modelOut.txt')
 vocab = model.get_vocab()
 for currentTopicId in range(11):
     fd = open(format("../txt/wordSimilarity%d.txt" % currentTopicId),"r")
