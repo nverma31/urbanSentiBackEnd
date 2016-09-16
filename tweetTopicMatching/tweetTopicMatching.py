@@ -47,7 +47,6 @@ freqFd.close()
 
 
 model = gensim.models.Word2Vec.load('../keywordsSelection/modelOut.txt')
-vocab = model.get_vocab()
 for currentTopicId in range(11):
     fd = open(format("../txt/wordSimilarity%d.txt" % currentTopicId),"r")
     wordRelevance = {}

@@ -15,6 +15,8 @@ class MySentences(object):
             yield line.split()
 
 sentences = MySentences('./termWord.txt') # a memory-friendly iterator
-print "started"
-model = gensim.models.Word2Vec(sentences, min_count=10, workers=4, size=200)
+# model = gensim.models.Word2Vec(min_count=10, workers=4, size=200)
+# model.build_vocab(sentences)
+# model.train(sentences)
+model = gensim.models.Word2Vec(sentences,min_count=10, workers=4, size=200)
 model.save('modelOut.txt')
