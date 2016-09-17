@@ -1,4 +1,5 @@
-import gensim, logging
+# import gensim, logging
+import word2vec
 import numpy as np
 
 topic = [
@@ -28,7 +29,7 @@ topic = [
     ['garbage', 'trash', 'scum']
     ]
 
-model = gensim.models.Word2Vec.load('modelOut.txt')
+model = word2vec.Word2Vec.load('modelOut.txt')
 
 vocab = model.get_vocab()
 
