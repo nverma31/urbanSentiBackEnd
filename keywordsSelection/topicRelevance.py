@@ -1,5 +1,5 @@
-# import gensim, logging
-import word2vec
+import gensim, logging
+# import word2vec
 import numpy as np
 
 topic = [
@@ -29,17 +29,19 @@ topic = [
     ['garbage', 'trash', 'scum']
     ]
 
-model = word2vec.Word2Vec.load('modelOut.txt')
-
-vocab = model.get_vocab()
+model = gensim.models.Word2Vec.load('modelOut.txt')
+vocab = model.vocab
+# vocab = model.get_vocab()
 
 for i in range(11):
-    temp = model.most_similar_all(positive=[topic[i][0]], topn=100000000)
+    temp = model.most_similar(positive=[topic[i][0]], topn=100000000)
     outValue = {}
+    outValue[topic[i][0]] = 1
     for tt in temp:
         outValue[tt[0]] = tt[1]
     for j in range(1,len(topic[i])):
         temp = model.most_similar_all(positive=[topic[i][j]], topn=100000000)
+        outValue[topic[i][j]] = 1
         for tt in temp:
             outValue[tt[0]] = max(outValue[tt[0]],tt[1])
     vocabcnt = 0
