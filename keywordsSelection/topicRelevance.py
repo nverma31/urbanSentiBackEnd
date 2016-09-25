@@ -14,8 +14,7 @@ topic = [
     ['banquet', 'dine', 'restaurant', 'cafeteria', 'cafe', 'eatery', 'pizzeria', 'ristorante', 'cuisine',
      'steakhouse', 'deli', 'qdoba', 'pasta', 'sushi', 'primantis', 'toast', 'grill', 'delicious', 'menu',
      'chili', 'noodlehead', 'burrito', 'primanti', 'burger', 'bakery', 'cakery', 'spaghetti', 'roast',
-     'hibachi', 'falafel', 'dibellas', 'coleslaw', 'chilly', 'brueggers', 'pierogies',
-     'tapa', 'schmicks', 'seafood', 'mccormick'],
+     'hibachi', 'falafel', 'dibellas', 'coleslaw', 'chilly', 'brueggers', 'pierogies', 'schmicks', 'seafood', 'mccormick'],
     ['beer', 'cocktail', 'liquor', 'pub', 'bar', 'wine', 'champagne', 'gin', 'vodka', 'martini',
      'whiskey', 'ale', 'lager', 'alcohol', 'tequila', 'tavern', 'bartender', 'hoppy', 'pilsner',
      'bourbon', 'rum', 'fuddle', 'mead', 'yuengling', 'margarita'],
@@ -40,7 +39,7 @@ for i in range(11):
     for tt in temp:
         outValue[tt[0]] = tt[1]
     for j in range(1,len(topic[i])):
-        temp = model.most_similar_all(positive=[topic[i][j]], topn=100000000)
+        temp = model.most_similar(positive=[topic[i][j]], topn=100000000)
         outValue[topic[i][j]] = 1
         for tt in temp:
             outValue[tt[0]] = max(outValue[tt[0]],tt[1])

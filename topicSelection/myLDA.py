@@ -4,8 +4,8 @@ from gensim import corpora, models, similarities
 import gc
 
 
-tbname='tweet_pgh_new'
-dbname='pittsburgh'
+tbname='tweet_pgh_ttt'
+dbname='Neeraj'
 user='postgres'
 pg=dbProcess.PgController(tbname,dbname,user)
 

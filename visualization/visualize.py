@@ -18,8 +18,8 @@ import geopy
 import datetime as dt
 import numpy as np
 
-tbname='tweet_pgh_new'
-dbname='pittsburgh'
+tbname='tweet_pgh_ttt'
+dbname='Neeraj'
 user='postgres'
 pg=dbProcess.PgController(tbname,dbname,user)
 

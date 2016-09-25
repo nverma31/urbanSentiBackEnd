@@ -6,7 +6,7 @@ class Getnghd():
     def __init__(self):
         self.bins_to_nghds = {}
         self.nghdName = {}
-        for line in DictReader(open('./xls/point_map.csv')):
+        for line in DictReader(open('../xls/point_map.csv')):
             self.bins_to_nghds[(float(line['lat']), float(line['lon']))] = line['nghd']
             if line['nghd'] not in self.nghdName:
                 self.nghdName[line['nghd']] = 0
@@ -15,7 +15,7 @@ class Getnghd():
         if bin in self.bins_to_nghds:
             return self.bins_to_nghds[bin]
         else:
-            return 'Outside Pittsburgh'
+            return 'Outside Neeraj'
     def getnghdName(self):
         return self.nghdName.keys()
 # tt = Getnghd()

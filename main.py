@@ -11,4 +11,4 @@ import dbProcess
 # build a new database, data pre-processing and store the data into the data base
 # ------------------------------------------------------------------------------
 #
-dbProcess.dbProcess('tweet_pgh_ttt','pittsburgh',maxIter=False)
+dbProcess.dbProcess('tweet_pgh_ttt','Neeraj',maxIter=False)

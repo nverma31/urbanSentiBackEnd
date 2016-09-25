@@ -1,6 +1,6 @@
 import dbProcess, os, copy
-tbname='tweet_pgh_new'
-dbname='pittsburgh'
+tbname='tweet_pgh_ttt'
+dbname='Neeraj'
 user='postgres'
 pg=dbProcess.PgController(tbname,dbname,user)
 
